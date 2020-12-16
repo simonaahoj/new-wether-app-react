@@ -18,8 +18,12 @@ export default function Weather(props){
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
             city: response.data.name,
-            date:new Date (response.data.dt * 1000),
+            timezone: response.data.timezone,
             icon:response.data.weather[0].icon,
+            country:response.data.sys.country,
+            sunrise:response.data.sys.sunrise,
+            sunset:response.data.sys.sunset,
+            previous: weatherData
         });
     }
        
@@ -52,7 +56,6 @@ export default function Weather(props){
           </div>  
         </form>
          <WeatherInfo data={weatherData}/>
-  
        </div>)
     }
      else { 
