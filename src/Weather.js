@@ -19,10 +19,10 @@ export default function Weather(props){
             wind: response.data.wind.speed,
             city: response.data.name,
             date:new Date (response.data.dt * 1000),
-            icon:"/",
+            icon:response.data.weather[0].icon,
         });
     }
-
+       
     function search(){
         let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=114cd41965401542304c61b473a9b798&units=metric`
         axios.get(apiUrl).then(handleResponse)
