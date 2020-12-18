@@ -26,7 +26,7 @@ export default function WeatherInfo(props){
                     <li title="Wind"><WiStrongWind size={24} color='#000' /> {props.data.wind} km/h </li>
                     <li title="Sunrise"><WiSunrise size={24} color='#000' /> <TimeOnly timezone={props.data.timezone} time={props.data.sunrise}  /> am</li>
                     <li title="Sunset"><WiSunset size={24} color='#000' /> <TimeOnly timezone={props.data.timezone} time={props.data.sunset} /> pm</li>
-                    <li title="Sun Light"><WiDaySunny size={24} color='#000' /> {Math.floor((props.data.sunset-props.data.sunrise)/(60*60))}h {Math.floor(((props.data.sunset-props.data.sunrise)/60))%60}min</li>
+                    <li title="Sun yLight"><WiDaySunny size={24} color='#000' /> {Math.floor((props.data.sunset-props.data.sunrise)/(60*60))}h {Math.floor(((props.data.sunset-props.data.sunrise)/60))%60}min</li>
                 </ul>
             </div>
         </div>
