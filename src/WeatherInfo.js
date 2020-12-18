@@ -21,10 +21,14 @@ export default function WeatherInfo(props){
                 <WeatherIcon code={props.data.icon}/>
                 <WeatherTemperature celsium={props.data.temperature}/>
             </div>
-            <div className="col-6">
+            <div className="col-3 mt-3">
                 <ul>
                     <li title="Humidity"><WiRaindrop size={24} color='#000' />   {props.data.humidity}%</li>
                     <li title="Wind"><WiStrongWind size={24} color='#000' />   {props.data.wind} km/h </li>
+                </ul>
+            </div>
+            <div className="col-3">
+                <ul>
                     <li title="Sunrise"><WiSunrise size={24} color='#000' />   <TimeOnly timezone={props.data.timezone} time={props.data.sunrise}  /> am</li>
                     <li title="Sunset"><WiSunset size={24} color='#000' />   <TimeOnly timezone={props.data.timezone} time={props.data.sunset} /> pm</li>
                     <li title="Sun yLight"><WiDaySunny size={24} color='#000' />   {Math.floor((props.data.sunset-props.data.sunrise)/(60*60))}h {Math.floor(((props.data.sunset-props.data.sunrise)/60))%60}min</li>
