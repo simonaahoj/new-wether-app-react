@@ -1,7 +1,7 @@
 import React from 'react';
 
 export default function Time(props){
-    
+  
     let days =["Sunday", 
     "Monday", 
     "Tuesday", 
@@ -12,7 +12,7 @@ export default function Time(props){
 
     let currentTime = new Date();
     currentTime.setSeconds(currentTime.getSeconds() + props.timezone - 3600)
-
+ 
     let day = days[currentTime.getDay()];
 
     let hours = currentTime.getHours();
